@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #403d3d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1c1b1b;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #636161;
+}
+
+body {
+  font-family: Helvetica, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  background-color: rgba(22, 21, 21, 0.575);
+  position: absolute;
+  top: 0px;
+  height: calc(100vh - 20px);
+  width: 100vw;
+  z-index: 1;
+}
+
+.bgImage {
+  background: url(./public/netflix_bg.jpg);
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vw;
+  top: 0px;
+  height: calc(100vh - 20px);
+  z-index: -1;
+}
+.container {
+  min-width: 100vw;
+}
+
+.homeContainer {
+  position: relative;
+  z-index: 3;
+  min-width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  min-width: 100vw;
+}
+
+.faq {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  /* color: #08080828; */
+}
+
+.faq.active {
+  background-color: #2d2d2d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  font-size: 25px;
+}
+
+.faq-text {
+  font-size: 18px;
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.faq-toggle:focus {
+  outline: 0;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  display: block;
+  color: #fff;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./index.js"></script>
+    <title>Php Project</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="h-[80px] border-2 border-transparent text-[#eee]">
+      <nav class="flex justify-between m-5 border-2 border-transparent">
+        <div class="logo">
+          <img src="./public/netflix_logo.png" alt="Logo" class="h-[50px]" />
+        </div>
+        <div class="navbar flex items-center">
+          <ul class="navItems flex gap-6 text-2xl">
+            <a href="#home"
+              ><li class="items p-2 hidden md:block hover:text-gray-400">
+                Home
+              </li></a
+            >
+            <a href="#info"
+              ><li class="items p-2 hidden md:block hover:text-gray-400">
+                Info
+              </li></a
+            >
+            <a href="#ques"
+              ><li class="items p-2 hidden md:block hover:text-gray-400">
+                About
+              </li></a
+            >
+            <a
+              href="./index.php"
+              target="_blank"
+              class="bg-[#e50914] hover:bg-[#c51019] rounded p-2"
+              ><li class="items flex items-center">
+                <i class="fas fa-right-to-bracket mr-2"></i>
+                <span>Login</span>
+              </li></a
+            >
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Background -->
+    <div class="bgImage"></div>
+    <div class="overlay"></div>
+    <!-- Main body -->
+    <div class="container">
+      <!-- Home -->
+      <div class="homeContainer border-b-[5px] border-[#545454]">
+        <div class="main flex flex-col" id="home">
+          <div class="title flex flex-col flex-wrap">
+            <h2
+              class="text-3xl sm:text-4xl text-center m-2 px-2 font-bold md:text-6xl md:font-black"
+            >
+              Unlimited movies, TV shows, and more
+            </h2>
+            <p class="text-2xl m-2 p-2 text-center md:text-3xl">
+              Plan now start at USD 2.99/month.
+            </p>
+            <span class="text-xl text-center md:text-2xl m-2 px-2"
+              >Ready to watch? Enter your email to create or restart your
+              membership</span
+            >
+          </div>
+          <form
+            action="https://getform.io/f/0a436d71-5a8c-475e-8196-c7bbbed434a6"
+            method="POST"
+            class="sendEmail mt-4 w-full flex flex-col md:flex-row flex-wrap gap-4 justify-center items-center"
+          >
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              autocomplete="off"
+              placeholder="Email address"
+              class="h-[70px] p-4 text-xl bg-[rgba(0,0,0,0.5)] border border-gray-500 rounded-md max-w-[600px] flex-grow focus:outline-0"
+            />
+            <button
+              type="submit"
+              class="bg-[#e50914] hover:bg-[#c51019] h-[70px] text-l px-3 rounded-md max-w-[200px] md:max-w-[150px]"
+            >
+              <span>Get Started</span> <i class="fas fa-chevron-right mx-1"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Info -->
+      <div class="infoContainer">
+        <div id="info">
+          <!-- First -->
+          <div
+            class="first mt-10 flex flex-wrap justify-around items-center border-b-[5px] border-[#545454]"
+          >
+            <div class="text m-4">
+              <h2
+                class="text-4xl mb-2 text-center font-bold md:font-black md:text-5xl md:text-left"
+              >
+                Enjoy on your TV
+              </h2>
+              <p
+                class="text-xl mt-2 mx-2 text-center md:w-[500px] md:text-left"
+              >
+                Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+                Blu-ray players, and more.
+              </p>
+            </div>
+            <div class="graphic m-4">
+              <video
+                src="./public/netflix.mp4"
+                controls
+                muted
+                autoplay
+                class="h-[300px] md:h-[400px]"
+              ></video>
+            </div>
+          </div>
+          <!-- Second -->
+          <div
+            class="second mt-10 flex justify-around items-center flex-wrap-reverse border-b-[5px] border-[#545454]"
+          >
+            <div class="graphic m-4">
+              <img
+                src="./public/netflix2.jpeg"
+                alt="friends"
+                class="h-[300px] md:h-[400px] p-5"
+              />
+            </div>
+            <div class="text m-4">
+              <h2
+                class="text-4xl font-bold md:font-black md:text-5xl mb-3 text-center md:text-left"
+              >
+                Download your shows to watch offline
+              </h2>
+              <p
+                class="text-xl mt-2 mx-2 md:w-[500px] md:text-left text-center"
+              >
+                Save your favorites easily and always have something to watch.
+              </p>
+            </div>
+          </div>
+          <!-- Third -->
+          <div
+            class="third mt-10 flex flex-wrap justify-around items-center border-b-[5px] border-[#545454] h-[300px]"
+          >
+            <div class="text m-4 text-center">
+              <h2 class="text-4xl font-bold md:text-5xl md:font-black mb-3">
+                Watch everywhere
+              </h2>
+              <p class="text-xl mt-3 mx-2">
+                Stream unlimited movies and TV shows on your phone, tablet,
+                laptop, and TV.
+              </p>
+            </div>
+          </div>
+          <!-- Fourth -->
+          <div
+            class="fourth mt-10 flex flex-wrap justify-around items-center border-b-[5px] border-[#545454]"
+          >
+            <div class="text p-5 m-4 text-center md:text-left">
+              <h2 class="text-4xl font-bold md:text-5xl md:font-black mb-3">
+                Create profiles for kids
+              </h2>
+              <p class="text-xl md:w-[500px] mx-2">
+                Send kids on adventures with their favorite characters in a
+                space made just for them—free with your membership.
+              </p>
+            </div>
+            <div class="graphic">
+              <img
+                src="./public/netflix3.png"
+                alt="child"
+                class="h-[400px] md:h-[500px] p-3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FAQs -->
+      <div class="faqContainer border-b-[5px] border-[#545454]">
+        <h1
+          class="text-4xl font-bold text-center m-5 md:font-black md:text-5xl"
+        >
+          Frequently Asked Questions
+        </h1>
+        <div id="ques" class="flex justify-center align-center">
+          <div class="faqs w-[70%]">
+            <div class="faq">
+              <h3 class="faq-title">What is Netflix?</h3>
+
+              <p class="faq-text">
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries, and more
+                on thousands of internet-connected devices.
+              </p>
+
+              <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="faq">
+              <h3 class="faq-title">How much does Netflix cost?</h3>
+              <p class="faq-text">
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                streaming device, all for one fixed monthly fee. Plans range
+                from USD2.99 to USD9.99 a month. No extra costs, no contracts.
+              </p>
+              <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="faq">
+              <h3 class="faq-title">Where can i watch?</h3>
+              <p class="faq-text">
+                Watch anywhere, anytime. Sign in with your Netflix account to
+                watch instantly on the web at netflix.com from your personal
+                computer or on any internet-connected device that offers the
+                Netflix app, including smart TVs, smartphones, tablets,
+                streaming media players and game consoles.
+              </p>
+              <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="faq">
+              <h3 class="faq-title">How do I cancel?</h3>
+              <p class="faq-text">
+                Netflix is flexible. There are no pesky contracts and no
+                commitments. You can easily cancel your account online in two
+                clicks. There are no cancellation fees – start or stop your
+                account anytime.
+              </p>
+              <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="faq">
+              <h3 class="faq-title">Is Netflix good for kids?</h3>
+              <p class="faq-text">
+                The Netflix Kids experience is included in your membership to
+                give parents control while kids enjoy family-friendly TV shows
+                and movies in their own space.
+              </p>
+              <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p class="m-5 flex justify-center align-center text-xl">
+        Copyright © Aayush Lamichhane 2023
+      </p>
+    </footer>
+  </body>
+</html>
